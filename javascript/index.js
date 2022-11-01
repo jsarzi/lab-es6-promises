@@ -47,10 +47,15 @@ getInstruction("mashedPotatoes", 0, (step0) => {
           ).innerHTML += `<li>Mashed potatoes are ready! </li>`;
           document.querySelector("#mashedPotatoesImg").hidden = false;
         });
+        (error) => console.log(error);
       });
+      (error) => console.log(error);
     });
+    (error) => console.log(error);
   });
+  (error) => console.log(error);
 });
+(error) => console.log(error);
 
 // Iteration 2 - using promises
 obtainInstruction("steak", 0).then((step0) => {
@@ -116,12 +121,11 @@ const brussel = document.querySelector("#brusselsSprouts");
 Promise.all(brusselsSprouts)
   .then((e) => {
     brusselsSprouts.forEach((e) => {
-      console.log(e);
       brussel.innerHTML += `<li>${e}</li>`;
 
-      brussel.innerHTML += `Brussels sprouts are ready!`;
       document.querySelector("#brusselsSproutsImg").hidden = false;
     });
+    brussel.innerHTML += `<li>Brussels sprouts are ready!</li>`;
   })
   .catch((error) => {
     console.log(error);
